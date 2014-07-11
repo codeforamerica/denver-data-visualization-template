@@ -7,6 +7,12 @@ url: "http://yourdomain.com"
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Footer settings
+footer:
+  image: "images/flag_tag.svg"
+  alt: "Code for America"
+  link: "http://codeforamerica.org/"
+
 # Build settings
 markdown: kramdown
 permalink: pretty
