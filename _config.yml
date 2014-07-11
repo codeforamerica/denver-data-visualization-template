@@ -1,0 +1,12 @@
+# Site settings
+title: Denver Infographic Template
+email: your-email@domain.com
+description: "The starting point for all Denver infographics."
+baseurl: ""
+url: "http://yourdomain.com"
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+permalink: pretty
