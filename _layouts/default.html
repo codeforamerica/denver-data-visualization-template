@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
 
-    <body>
+     <body data-spy="scroll" data-target=".navbar">
       <div class="container" role="main">
+
         <div class="row">
           {% include header.html %}
+
+          <div id="sidebar" class="navbar col-sm-3 visible-md visible-lg" role="complementary">
           {% include sidebar.html %}
+          </div>
 
+          <div class="col-md-9">
           {{ content }}
-
-          {% include footer.html %}
-          {% include javascript.html %}
+          </div>
         </div>
       </div>
-    </body>
 
+      {% include footer.html %}
+      {% include javascript.html %}
+    </body>
 </html>

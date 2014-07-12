@@ -1,11 +1,17 @@
 ---
 ---
-/* These lines are necessary for jekyll 
+/* These lines are necessary for jekyll to recognize a sass file
     http://jekyllrb.com/docs/assets/
 */
 
 /* Theme Colors */
 $primary-color: #41a8c4;
+$nav-lightest-accent: white;
+$nav-caret: #777;
+$nav-caret-dropdown: #333;
+$nav-caret-open: #555;
+
+/* Theme Fonts */
 $font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 /* Master Styles */
@@ -29,7 +35,126 @@ img.center {
   float: left;
 }
 
+.jumbotron {
+  background-color: $primary-color;
+  text-align: left;
+}
+
 .row {margin-bottom: 50px;}
+
+/* Navigation */
+.navbar-default {
+  color: $nav-lightest-accent;
+  background-color: $primary-color;
+  margin: 0;
+  border-radius: 0;
+  border:none;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: $nav-lightest-accent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $nav-lightest-accent;
+}
+
+.navbar-default .navbar-toggle:hover {
+  background-color: $nav-lightest-accent;
+  -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar{
+  background-color: $primary-color;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
+}
+
+.navbar-default .navbar-toggle:focus {
+  background-color: $nav-lightest-accent;
+}
+
+.navbar-default .navbar-toggle:focus .icon-bar{
+  background-color: $primary-color;
+}
+
+#topbar{border-bottom: 1px solid $nav-lightest-accent;}
+
+/* Title */
+.navbar-default .navbar-brand {
+    color: $nav-lightest-accent;
+    font-weight: 500;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: $nav-lightest-accent;
+}
+
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: $nav-lightest-accent;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: $nav-lightest-accent;
+    opacity:0.5;
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: $primary-color;
+    background-color: $nav-lightest-accent;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: $primary-color;
+    background-color: $nav-lightest-accent;
+}
+
+/* caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: $nav-caret;
+    border-bottom-color: $nav-caret;
+}
+
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: $nav-caret-dropdown;
+    border-bottom-color: $nav-caret-dropdown;
+}
+
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: $nav-caret-open;
+    border-bottom-color: $nav-caret-open;
+}
+
+/*Pin the top nav to the top while scrolling*/
+.navbar-default {
+  position:fixed;
+  left:0px;
+  top:0px;
+  z-index: 1;
+  width: 100%;
+}
 
 /* Share Buttons*/
 .share-text {
@@ -72,13 +197,170 @@ img.center {
 
 .fb:hover {
   background-image: url('../images/fb_hover.svg');
-  border: 1px solid white;
+  border: 1px solid $nav-lightest-accent;
 }
 .twitter:hover {
   background-image: url('../images/twitter_hover.svg');
-  border: 1px solid white;
+  border: 1px solid $nav-lightest-accent;
 }
 .gplus:hover {
   background-image: url('../images/gplus_hover.svg');
-  border: 1px solid white;
+  border: 1px solid $nav-lightest-accent;
+}
+
+/*
+ * Side navigation
+ *
+ * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+ * sections of docs content.
+ */
+
+/* By default it's not affixed in mobile views, so undo that */
+.bs-sidebar.affix {
+  position: static;
+}
+
+#sidebar h3 {
+  padding-left: 5px;
+  font-size: 1.2em;
+}
+
+/* First level of nav */
+.bs-sidenav {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top:    10px;
+  padding-bottom: 10px;
+  text-shadow: 0 1px 0 $nav-lightest-accent;
+  background-color: #f7f5fa;
+  border-radius: 5px;
+}
+
+/* All levels of nav */
+.bs-sidebar .nav > li > a {
+  display: block;
+  color: #4d4d4d;
+  padding: 5px 20px;
+}
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav > li > a:focus {
+  text-decoration: none;
+  background-color: $primary-color;
+  color: $nav-lightest-accent;
+  text-shadow: none;
+}
+.bs-sidebar .nav > .active > a,
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+  font-weight: bold;
+  color: $primary-color;
+  text-shadow: none;
+  border-left: 2px solid $primary-color;
+}
+
+.bs-sidebar .nav > .active:hover > a {
+  color: $nav-lightest-accent;
+}
+
+
+/* Nav: second level (shown on .active) */
+.bs-sidebar .nav .nav {
+  display: none; /* Hide by default, but at >768px, show it */
+  margin-bottom: 8px;
+}
+.bs-sidebar .nav .nav > li > a {
+  padding-top:    3px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+  font-size: 90%;
+}
+
+.affix-top,.affix{
+  position: static;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: $nav-lightest-accent;
+  color: $nav-caret-open;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height:100%;
+  clear:both;
+}
+
+footer a {
+  color: $nav-caret-open;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: $primary-color;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
+}
+
+/* Show and affix the side nav when space allows it */
+@media(max-width:767px){
+  .big-number {
+    font-size: 5em;
+  }
+}
+
+@media(min-width:768px){
+  .big-number {
+    font-size: 6em;
+  }
+}
+
+@media (min-width: 992px) {
+  .big-number {
+    font-size: 5em;
+  }
+
+  .bs-sidebar .nav > .active > ul {
+    display: block;
+  }
+
+  .bs-sidebar .nav > .active > ul {
+    display: block;
+  }
+
+  /* Widen the fixed sidebar */
+  .bs-sidebar.affix,
+  .bs-sidebar.affix-bottom {
+    width: 213px;
+  }
+
+  .bs-sidebar.affix {
+    position: fixed; /* Undo the static from mobile first approach */
+  }
+
+  .bs-sidebar.affix-bottom {
+    position: absolute; /* Undo the static from mobile first approach */
+  }
+
+  .bs-sidebar.affix-bottom .bs-sidenav,
+  .bs-sidebar.affix .bs-sidenav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Widen the fixed sidebar again */
+  .bs-sidebar.affix-bottom,
+  .bs-sidebar.affix {
+    width: 263px;
+  }
+  
+  .big-number {
+    font-size: 6em;
+  }
 }

@@ -2,17 +2,26 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1>Posts</h1>
-
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
+<!-- About ================================================== -->
+<div id="about" class="section-block">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-10">
+        <h1>{{ site.title }}</h1>
+        <p class="lead">{{ site.about.description }}</p>
+        <p class="small">{{ site.about.label }}: {{ site.timestamp }}</p>
+        <div class="hidden-lg hidden-md">
+          <div class="share-text">{{site.share}}</div>
+          <br>
+          {% include social.html %}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+{% for post in site.posts %}
+  <div id="{{post.href}}" class="section-block">
+    {{post.content}}
+  </div>
+{% endfor %}

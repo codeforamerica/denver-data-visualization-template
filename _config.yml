@@ -1,11 +1,15 @@
 # Site settings
 title: Denver Infographic Template
+timestamp: July 2014
 email: your-email@domain.com
 description: "The starting point for all Denver infographics."
 baseurl: ""
 url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+share: "Share this."
+
+about:
+  label: "Last updated"
+  description: "The information presented here is a representation of Open Data provided by the City and County of Denver."
 
 # Footer settings
 footer:
