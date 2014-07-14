@@ -20,3 +20,7 @@ footer:
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Custom collections
+collections:
+- big_numbers
