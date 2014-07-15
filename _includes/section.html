@@ -1,0 +1,15 @@
+<div class="row section-title">
+  <h1>{{post.title}}</h1>
+</div>
+
+{% for big in site.big_numbers %}
+  {% if big.section == post.section %}
+    {% include big.html %}
+  {% endif %}
+{% endfor %}
+
+{% for graph in site.graphs %}
+  {% if graph.section == post.section %}
+    {% include graph.html %}
+  {% endif %}
+{% endfor %}

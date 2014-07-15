@@ -20,12 +20,8 @@ layout: default
   </div>
 </div>
 
-{% for big in site.big_numbers %}
-  {% include big.html %}
-{% endfor %}
-
 {% for post in site.posts %}
-  <div id="{{post.href}}" class="section-block">
-    {{post.content}}
+  <div id="{{post.section}}" class="section-block">
+    {% include section.html %}
   </div>
 {% endfor %}
