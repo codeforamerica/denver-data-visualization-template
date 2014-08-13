@@ -3,22 +3,12 @@ layout: default
 ---
 
 <!-- About ================================================== -->
-<div id="about" class="section-block">
-  <div class="jumbotron">
-    <div class="row">
-      <div class="col-sm-10">
-        <h1>{{ site.title }}</h1>
-        <p class="lead">{{ site.about.description }}</p>
-        <p class="small">{{ site.about.label }}: {{ site.timestamp }}</p>
-        <div class="hidden-lg hidden-md">
-          <div class="share-text">{{site.share}}</div>
-          <br>
-          {% include social.html %}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<span class="anchor" id="about"></span>
+<div class="jumbotron">
+  <h1>{{ site.title }}</h1>
+  <p class="lead">{{ site.about.description }}</p>
+  <p class="small">{{ site.about.label }}: {{ site.timestamp }}</p>
+</div> <!-- About -->
 
 {% for post in site.posts %}
   <div id="{{post.section}}" class="section-block">
