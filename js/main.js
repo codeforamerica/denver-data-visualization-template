@@ -2,6 +2,7 @@ var app = {} ;
 
 $(document).ready(function(){
   app.hookupScrollShadow();
+  $('.bigtext').bigtext();
 })
 
 function populateBigNumber(id) {

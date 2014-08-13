@@ -26,19 +26,10 @@ body {
   background-color: $primary-color;
 }
 
-.section-title {
-  text-align: center;
-}
-
 img.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-#sidebar {
-  display:block;
-  float: left;
 }
 
 .jumbotron {
@@ -48,10 +39,57 @@ img.center {
 
 .row {margin-bottom: 50px;}
 
-/* Navigation */
-.nav-full {
-  border-bottom: 1px solid white;
+/* Infographic */
+.infographic {
+  border: 1px solid  #2F98B4;
+  margin-bottom: 80px;
+
 }
+
+/* Sections */
+.info-header {
+  background-color: #8dcbdc;
+  padding: 20px 40px 20px 40px;
+}
+
+.info-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+.info-date {
+  font-size: 1em;
+  padding-left:  20px;
+}
+.info-data {
+  float: right;
+  text-align: right;
+  padding-top: 13px;
+}
+.info-row {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-around;
+  align-items:center;
+  flex-wrap: wrap;
+}
+
+.info-half {
+  max-width: 50%;
+  padding: 40px;
+  text-align: center;
+  min-width:370px;
+}
+
+.info-full {
+  max-width: 100%;
+  padding: 40px;
+  border-top: 1px solid #8dcbdc;
+}
+
+.info-description {padding-top: 20px;}
+
+/* Navigation */
 .main-nav {
   background: $primary-color;
   height: 60px;
@@ -81,13 +119,22 @@ img.center {
   padding: 30px;
 }
 
-/*Pin the top nav to the top while scrolling*/
-.navbar-default {
-  position:fixed;
-  left:0px;
-  top:0px;
-  z-index: 1;
-  width: 100%;
+.anchor{
+  display: block;
+  height: 80px; /*same height as header*/
+  margin-top: -80px; /*same height as header*/
+  visibility: hidden;
+}
+
+/* BIGTEXT STYLES */
+.bigtext {
+    font-family: Helvetica, Arial;
+    font-weight: 700;
+    text-align: center;
+}
+
+.bigtext > span {
+    line-height: 0.95em;
 }
 
 /* footer */
@@ -117,112 +164,6 @@ footer a:hover {
   transition:.2s;
 }
 
-/*Center Content Vertically*/
-.col-sm-4.centered,
-.col-sm-4.centered+.col-sm-8 {
-  float:none;
-  display:inline-block;
-  vertical-align:middle;
-
-}
-.col-sm-4.centered {
-  margin-right:-.4em;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-.col-md-8.centered,
-.col-md-8.centered+.col-md-4 {
-  float:none;
-  display:inline-block;
-  vertical-align:middle;
-
-}
-.col-md-8.centered {
-  margin-right:-.4em;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-.col-md-6.centered, .col-md-6.centered+.col-md-6 {
-  float:none;
-  display:inline-block;
-  vertical-align:middle;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-.col-md-6.centered {
-  margin-right:-.8em;
-}
-
-
-
-/* This parent can be any width and height */
-.block {
-}
-
-/* The ghost, nudged to maintain perfect centering */
-.block:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.3em; /* Adjusts for spacing */
-}
-
-/* The element to be centered, can also be of any width and height */
-.centered {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.section-block {
-  padding-bottom: 50px;
-  margin-bottom: 50px;
-/*  border-bottom: 1px solid rgba(255, 255, 255, .6);*/
-}
-
-/* Useful Classes */
-.full-width-image {width: 100%;}
-.half-width-image {width: 50%;}
-
-/* Format image+description container*/
-.insight-container {
-  margin: 30px 0 30px 0;
-}
-
-/* Format description under images*/
-.image-description {
-  margin: 20px auto 0 auto;
-  width: 80%;
-}
-
-/* Format description under charts*/
-.chart-description {
-  margin: 0 auto 0 auto;
-  width: 80%;
-}
-
-
-.big-number {
-  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 5em;
-  text-align: center;
-}
-
-.big-number-description {
-  font-size: 1.3em;
-}
-
-/* Show and affix the side nav when space allows it */
-@media(max-width:767px){
-  .big-number {
-    font-size: 5em;
-  }
-
-  .big-number-description {
-    font-size: 1.3em;
-  }
-}
-
 /* Show and affix the side nav when space allows it */
 @media(max-width:767px){
   .info-date, .info-data {display:none;}
@@ -233,7 +174,6 @@ footer a:hover {
   footer {
     padding-top: 2em;
   }
-  .footer-content {margin-top: 2em;}
   .main-nav {display: none;}
 }
 @media(min-width:768px){}

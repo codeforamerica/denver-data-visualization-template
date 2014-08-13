@@ -10,8 +10,11 @@ layout: default
   <p class="small">{{ site.about.label }}: {{ site.timestamp }}</p>
 </div> <!-- About -->
 
-{% for post in site.posts %}
-  <div id="{{post.section}}" class="section-block">
-    {% include section.html %}
-  </div>
-{% endfor %}
+<div class="infographic clearfix">
+  {% for post in site.posts %}
+    <span class="anchor" id="{{post.section}}"></span>
+    <div class="info-group">
+      {% include section.html %}
+    </div>
+  {% endfor %}
+</div>
