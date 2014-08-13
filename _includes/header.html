@@ -1,19 +1,7 @@
 <header>
-  <nav class="navbar navbar-default navbar-static visible-xs visible-sm" role="navigation">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="topbar">
-      <ul class="nav navbar-nav navbar-right">
-        {% include nav-links.html %}
-      </ul>
-    </div>
-  </nav>
+<nav class="main-nav">
+  <div class="nav-links">
+    {% include nav-links.html %}
+  </div>
+</nav>
 </header>

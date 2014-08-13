@@ -1,3 +1,9 @@
+var app = {} ;
+
+$(document).ready(function(){
+  app.hookupScrollShadow();
+})
+
 function populateBigNumber(id) {
   var csvFile = "data/" + id + "-big.csv";
   d3.csv(csvFile, function(error, data) {
