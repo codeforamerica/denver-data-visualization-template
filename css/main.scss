@@ -6,6 +6,8 @@
 
 /* Theme Colors */
 $primary-color: #41a8c4;
+$secondary-color: #8dcbdc;
+$tertiary-color: #2F98B4;
 $text-color: white;
 $light-background-text-color: #555;
 
@@ -41,14 +43,14 @@ img.center {
 
 /* Infographic */
 .infographic {
-  border: 1px solid  #2F98B4;
+  border: 1px solid $tertiary-color;
   margin-bottom: 80px;
 
 }
 
 /* Sections */
 .info-header {
-  background-color: #8dcbdc;
+  background-color: $secondary-color;
   padding: 20px 40px 20px 40px;
 }
 
@@ -84,7 +86,7 @@ img.center {
 .info-full {
   max-width: 100%;
   padding: 40px;
-  border-top: 1px solid #8dcbdc;
+  border-top: 1px solid $secondary-color;
 }
 
 .info-description {padding-top: 20px;}
