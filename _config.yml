@@ -1,8 +1,8 @@
 # Site settings
-title: Denver Infographic Template
+title: Denver Data Visualization Template
 timestamp: July 2014
 email: your-email@domain.com
-description: "The starting point for all Denver infographics."
+description: "The starting point for all Denver CfA visualizations."
 baseurl: ""
 url: "http://yourdomain.com"
 share: "Share this."
