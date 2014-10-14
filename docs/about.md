@@ -23,3 +23,6 @@ The template started as two separate visual dashboards created by the fellows in
 
 * Each Marijuana media inquiry takes roughly 2-3 hours of two city analysts to investigate and find an answer for.
 * The 311 Department in the City and County of Denver manually generates a 311 report every month.
+* [The 2014 Fellowship in Denver][cfa]
+
+[cfa]: http://www.codeforamerica.org/governments/denver/

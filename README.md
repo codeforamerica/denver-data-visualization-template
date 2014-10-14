@@ -8,7 +8,7 @@ Table of Contents
 * [License][license]
 
 
-[whatis]: #what-is-denver-data-visualization-template
+[whatis]: #what-is-the-denver-data-visualization-template
 [technical]: #technical-details
 [license]: #license
 
@@ -56,8 +56,11 @@ This is the starting point for Denver visualizations. It unifies the look and fe
 [rake]: https://github.com/jimweirich/rake
 
 ### Prerequisites
-* Ruby 2.1.1
-* Bundler In the command line: ` gem install bundler `
+* [Ruby 2.1.1][ruby]
+* [Bundler][bundler] in the command line: ` gem install bundler `
+
+[ruby]: https://www.ruby-lang.org/en/news/2014/02/24/ruby-2-1-1-is-released/
+[bundler]: http://bundler.io/
 
 ### Code
 See the readmes for other visualization repos for specific deployment details.
@@ -102,7 +105,7 @@ We use the GitHub issue tracker to track bugs and features. Before submitting a 
 [branch]: http://learn.github.com/p/branching.html
 [pr]: http://help.github.com/send-pull-requests/
 
-## License
+##License
 See the [LICENSE][] for details.
 [license]: https://github.com/boonrs/denver-infographic-template/blob/master/LICENSE
 
