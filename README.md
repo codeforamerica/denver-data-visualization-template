@@ -1,8 +1,6 @@
 Denver Data Visualization Template
 =====================
 
-
-Table of Contents
 * [What is the Denver Data Visualization Template?][whatis]
 * [Technical details and developer documentation][technical]
 * [License](#license)
