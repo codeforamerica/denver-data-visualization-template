@@ -5,12 +5,11 @@ Denver Data Visualization Template
 Table of Contents
 * [What is the Denver Data Visualization Template?][whatis]
 * [Technical details and developer documentation][technical]
-* [License][license]
+* [License](#license)
 
 
 [whatis]: #what-is-the-denver-data-visualization-template
 [technical]: #technical-details
-[license]: #license
 
 ##What is the Denver Data Visualization Template?
 
