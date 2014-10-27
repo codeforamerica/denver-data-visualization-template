@@ -62,10 +62,6 @@ This is the starting point for Denver visualizations. It unifies the look and fe
 ### Code
 See the readmes for other visualization repos for specific deployment details.
 
-[This is the template repo][code].
-
-[code]: https://github.com/codeforamerica/denver-data-visualization-template
-
 ### Installation, Usage
 
 **Download dependencies** in the command line: ` bundle `
@@ -79,14 +75,6 @@ See the readmes for other visualization repos for specific deployment details.
 #### Deployment
 1. Compile the site: `jekyll build`
 1. Deploy contents of */_site* to server.
-
-#### ETL Scripts
-[Rake][] tasks exist for each section of the data visualization. These tasks query the open data portal and update the csv files located in /data with the latest data. These can be set to run on a schedule through task scheduler (windows), a cron job (others), or heroku scheduler (heroku). Errors output to the console.
-* List all tasks: `rake -T`
-* Run all tasks: `rake`
-
-[rake]: https://github.com/jimweirich/rake
-
 
 ### Submitting an Issue
 We use the GitHub issue tracker to track bugs and features. Before submitting a bug report or feature request, check to make sure it hasn't already been submitted. When submitting a bug report, please include a [Gist][] that includes a stack trace and any details that may be necessary to reproduce the bug.
